@@ -1,4 +1,4 @@
-package arrays_strings.easy;
+package arrays_strings.medium;
 
 public class productOfArrayExceptSelf {
     
