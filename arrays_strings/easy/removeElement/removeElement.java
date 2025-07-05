@@ -26,8 +26,12 @@ public class removeElement {
     public static void main(String[] args) {
         removeElement solution = new removeElement();
 
-        int result = solution.removeElement(new int[] { 3,2,2,3 }, 3);
+        int[] nums = {3, 2, 2, 3};  
+        int val = 3;               
 
-        System.out.println(result);  
+        int length = solution.removeElement(nums, val);
+
+        System.out.println("New length after removing " + val + ": " + length);
+        System.out.println("Array after removal: " + Arrays.toString(Arrays.copyOfRange(nums, 0, length)));
     }
 }
