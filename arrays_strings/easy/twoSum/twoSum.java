@@ -5,6 +5,8 @@ import java.util.Map;
 //Learned:
 //To create new array directly: new int[] {i, hash.get(target-num)};
 //Create HashMap: Map<Integer, Integer> hash = new HashMap<>();
+//Check if key exists: hash.containsKey(value)
+//Insert pair in hash: hash.put(num,i)
 
 public class twoSum {
     public int[] twoSum(int[] nums, int target) {
