@@ -1,5 +1,7 @@
 import java.util.Arrays;
 
+//Learned:
+//rotated[(i+k) % nums.length] = nums[i]
 public class rotateArray {
     public void rotate(int[] nums, int k) {
         //considers situation where k is greater than array length
