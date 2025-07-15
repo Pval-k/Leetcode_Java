@@ -25,6 +25,21 @@ public class isSubsequence {
             return false;
         }
     }
+    public static void main(String[] args) {
+        isSubsequence checker = new isSubsequence();
+
+        String s1 = "abc";
+        String t1 = "ahbgdc";
+        System.out.println("\"" + s1 + "\" is a subsequence of \"" + t1 + "\": " + checker.isSubsequence(s1, t1)); // true
+
+        String s2 = "axc";
+        String t2 = "ahbgdc";
+        System.out.println("\"" + s2 + "\" is a subsequence of \"" + t2 + "\": " + checker.isSubsequence(s2, t2)); // false
+
+        String s3 = "";
+        String t3 = "anything";
+        System.out.println("\"" + s3 + "\" is a subsequence of \"" + t3 + "\": " + checker.isSubsequence(s3, t3)); // true
+    }
 }
 
 /* Condensed solution:
