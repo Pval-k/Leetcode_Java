@@ -23,6 +23,26 @@ public class containerWithMostWater {
 
         return max_volume;
     }
+    public static void main(String[] args) {
+        containerWithMostWater solution = new containerWithMostWater();
+
+        // Test cases
+        int[][] testCases = {
+            {1,8,6,2,5,4,8,3,7},    // Expected: 49
+            {1,1},                 // Expected: 1
+            {4,3,2,1,4},           // Expected: 16
+            {1,2,1},               // Expected: 2
+            {2,3,10,5,7,8,9},      // Expected: 36
+            {1},                   // Expected: 0
+            {},                    // Expected: 0
+            {5,5,5,5,5}            // Expected: 20
+        };
+
+        for (int i = 0; i < testCases.length; i++) {
+            int result = solution.maxArea(testCases[i]);
+            System.out.println("Test case " + (i+1) + ": " + result);
+        }
+    }
 }
 
 /* My code without shortening it:
