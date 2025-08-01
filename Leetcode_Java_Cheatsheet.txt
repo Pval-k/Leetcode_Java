@@ -1,0 +1,19 @@
+Arrays/Strings:
+Max value: 
+Integer.MAX_VALUE;
+
+
+------------------------------------------------------------------------
+Hashmaps:
+Declare a Hash Set: 
+Map<Integer, Integer> hash = new HashMap<>();
+
+Add key-value pair to hash:
+hash.put(key, value)
+
+Get value from key:
+hash.get(key)
+
+If the key exists get the value or add key-value pair to hash:
+hash.getOrDefault(key, value)
+

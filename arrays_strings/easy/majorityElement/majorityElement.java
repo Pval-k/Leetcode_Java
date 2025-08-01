@@ -1,32 +1,32 @@
 import java.util.HashMap;
 import java.util.Map;
 
-//Learned:
-//Create result variable to keep track of the answer for the max_frequency since its hard to get the key from the value
-//Line: 26: Initialize count to 1 not 0
-//Chcek if key exists: hash.containsKey(nums[i])
-//Update/Put: hash.put(nums[i], 1)
-//Get value from key: hash.get(nums[i])
 
+//Learned:
+//Set majority_element to nums[0]: If the array has one element, majority_element isn’t updated since updates happen only when the key exists.
+//Can't use Math.max for max_frequency because we need to go into the condition to update majority_element
+//You can get value from key but not key from value
 public class majorityElement {
     public int majorityElement(int[] nums) {
         Map<Integer, Integer> hash = new HashMap<>();
-        int result = 0;
         int max_frequency = 0;
-        for(int i = 0; i < nums.length; i++){
-            if(hash.containsKey(nums[i])){
-                
-                hash.put(nums[i], hash.get(nums[i])+1);
-                if(max_frequency<hash.get(nums[i])){
-                    max_frequency = hash.get(nums[i]);
-                    result = nums[i];
+        int majority_element = nums[0];
+        
+        for(int num : nums){
+            if(hash.containsKey(num)){
+                hash.put(num, hash.get(num)+1);
+                if(max_frequency < hash.get(num)){
+                    max_frequency = hash.get(num);
+                    majority_element = num;
                 }
             }
             else{
-                hash.put(nums[i], 1);
+                hash.put(num,1);
             }
         }
-        return result;
+
+        return majority_element;
+
     }
     public static void main(String[] args) {
         majorityElement solution = new majorityElement();
@@ -37,6 +37,20 @@ public class majorityElement {
         System.out.println("Majority element: " + result);  // Should print 2
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //Another version:
 /*
@@ -59,3 +73,32 @@ public int majorityElement(int[] nums) {
 
 //hash.getOrDefault(i,0)
 //If key exists get i, else gets 0
+
+
+
+//Learned:
+//Create result variable to keep track of the answer for the max_frequency since its hard to get the key from the value
+//Line: 26: Initialize count to 1 not 0
+//Check if key exists: hash.containsKey(nums[i])
+//Update/Put: hash.put(nums[i], 1)
+//Get value from key: hash.get(nums[i])
+
+/*
+Map<Integer, Integer> hash = new HashMap<>();
+        int result = 0;
+        int max_frequency = 0;
+        for(int i = 0; i < nums.length; i++){
+            if(hash.containsKey(nums[i])){
+                
+                hash.put(nums[i], hash.get(nums[i])+1);
+                if(max_frequency<hash.get(nums[i])){
+                    max_frequency = hash.get(nums[i]);
+                    result = nums[i];
+                }
+            }
+            else{
+                hash.put(nums[i], 1);
+            }
+        }
+        return result;
+ */

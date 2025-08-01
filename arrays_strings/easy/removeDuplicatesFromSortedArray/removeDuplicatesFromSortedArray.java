@@ -1,11 +1,44 @@
 import java.util.Arrays;
 
-//Learned:
-//Because we are updating A+1, we need to return A+1 
 
 public class removeDuplicatesFromSortedArray {
     public int removeDuplicates(int[] nums) {
-        int A = 0;
+        
+    }
+    public static void main(String[] args) {
+        removeDuplicatesFromSortedArray solution = new removeDuplicatesFromSortedArray();
+
+        int[] nums = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};  // Sample input
+        int length = solution.removeDuplicates(nums);
+
+        System.out.println("Length after removing duplicates: " + length);
+        System.out.println("Array after removing duplicates: " + Arrays.toString(Arrays.copyOfRange(nums, 0, length)));
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Learned:
+//Because we are updating A+1, we need to return A+1 
+
+
+/*
+ * int A = 0;
         int B = 0;
 
         while(B < nums.length){
@@ -19,14 +52,4 @@ public class removeDuplicatesFromSortedArray {
             }
         }
         return A+1;
-    }
-    public static void main(String[] args) {
-        removeDuplicatesFromSortedArray solution = new removeDuplicatesFromSortedArray();
-
-        int[] nums = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};  // Sample input
-        int length = solution.removeDuplicates(nums);
-
-        System.out.println("Length after removing duplicates: " + length);
-        System.out.println("Array after removing duplicates: " + Arrays.toString(Arrays.copyOfRange(nums, 0, length)));
-    }
-}
+ */

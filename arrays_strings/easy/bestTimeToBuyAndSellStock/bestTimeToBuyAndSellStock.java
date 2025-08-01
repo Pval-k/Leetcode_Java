@@ -1,6 +1,44 @@
 public class bestTimeToBuyAndSellStock {
     public int maxProfit(int[] prices) {
         int max_profit = 0;
+        int min_price = Integer.MAX_VALUE;
+
+        for(int price: prices){
+            min_price = Math.min(min_price, price);
+            max_profit = Math.max(max_profit, price-min_price);
+        }
+
+        return max_profit;
+    }
+    public static void main(String[] args) {
+        bestTimeToBuyAndSellStock solution = new bestTimeToBuyAndSellStock();
+
+        int[] prices = {7, 1, 5, 3, 6, 4};  
+        int profit = solution.maxProfit(prices);
+
+        System.out.println("Maximum Profit: " + profit);  
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Old Code:
+ * int max_profit = 0;
         int lowest_price = Integer.MAX_VALUE;
         for(int i = 0; i < prices.length; i++){
 
@@ -16,13 +54,4 @@ public class bestTimeToBuyAndSellStock {
 
         }
         return max_profit;
-    }
-    public static void main(String[] args) {
-        bestTimeToBuyAndSellStock solution = new bestTimeToBuyAndSellStock();
-
-        int[] prices = {7, 1, 5, 3, 6, 4};  
-        int profit = solution.maxProfit(prices);
-
-        System.out.println("Maximum Profit: " + profit);  
-    }
-}
+ */
