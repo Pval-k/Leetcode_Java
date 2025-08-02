@@ -1,9 +1,19 @@
 import java.util.Arrays;
 
-
+//Learned:
+//Since I did a for loop to move B, i don't need to check for if nums[B] == nums[A] and do B++, B will automatically increment
 public class removeDuplicatesFromSortedArray {
     public int removeDuplicates(int[] nums) {
-        
+        int A = 0;
+
+        for(int B = 0; B < nums.length; B++){
+            if(nums[B] != nums[A]){
+                nums[A+1] = nums[B];
+                A++;
+            }
+        }
+
+        return A+1;
     }
     public static void main(String[] args) {
         removeDuplicatesFromSortedArray solution = new removeDuplicatesFromSortedArray();

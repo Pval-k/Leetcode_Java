@@ -1,10 +1,16 @@
 import java.util.Arrays;
 
-
-
 public class removeElement {
     public int removeElement(int[] nums, int val) {
-        
+        int A = 0;
+
+        for(int B = 0; B < nums.length; B++){
+            if(nums[B] != val){
+                nums[A] = nums[B];
+                A++;
+            }
+        }
+        return A;
     }
 
     public static void main(String[] args) {
